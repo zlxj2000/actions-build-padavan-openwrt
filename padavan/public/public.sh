@@ -47,8 +47,11 @@ sed -i "/CONFIG_FIRMWARE_INCLUDE_TUNSAFE/d" .config      # 删除配置项 TUNSA
 sed -i "/CONFIG_FIRMWARE_INCLUDE_ALIDDNS/d" .config      # 删除配置项 阿里 DDNS
 sed -i "/CONFIG_FIRMWARE_INCLUDE_SMARTDNS/d" .config     # 删除配置项 smartDns
 sed -i "/CONFIG_FIRMWARE_INCLUDE_SRELAY/d" .config       # 删除配置项 srelay 代理
-sed -i "/CONFIG_FIRMWARE_INCLUDE_WYY/d" >> .config       # 删除配置项 网易云解锁
-sed -i "/CONFIG_FIRMWARE_INCLUDE_WYYBIN/d" >> .config    # 删除配置项 网易云解锁GO版本执行文件（4M多）注意固件超大小
+sed -i "/CONFIG_FIRMWARE_INCLUDE_WYY/d"  .config       # 删除配置项 网易云解锁
+sed -i "/CONFIG_FIRMWARE_INCLUDE_WYYBIN/d" .config    # 删除配置项 网易云解锁GO版本执行文件（4M多）注意固件超大小
+sed -i '/CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME/d'  .config
+sed -i '/CONFIG_FIRMWARE_INCLUDE_ZEROTIER/d'  .config
+sed -i '/CONFIG_FIRMWARE_INCLUDE_SSOBFS/d'  .config
 # 3. 添加公共自定义功能，设备单个的到设备 sh文件中添加
 ######################################################################
 # 以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件
